@@ -1,0 +1,82 @@
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { USER_DELETE, USER_DELETE_AUTH } from "../../../Utils/Constant";
+import useDelete from "../../../Hooks/InstaEnroll/useDelete";
+import KeyValueDisplay from "../../InstaEnroll/Settingss/KeyValue";
+
+const DeleteUser = () => {
+  const selectedUser = useSelector(
+    (store) => store.userManagements.userSelItem
+  );
+
+  const navigate = useNavigate();
+
+  const [feedback, setFeedback] = useState("");
+
+  const user = useSelector((store) => store?.user?.items);
+  const userId = user?.map((items) => items.user_id);
+
+  const { handleDelete, isDeleting } = useDelete(USER_DELETE, USER_DELETE_AUTH);
+
+  const handleDeleteClick = () => {
+    const payload = {
+      user_id: selectedUser.user_id,
+      del_narration: feedback,
+    };
+    console.log(payload);
+
+    handleDelete(payload, userId, selectedUser, "/body/user");
+  };
+
+  if (!selectedUser) {
+    return <div>No user data available for deletion.</div>;
+  }
+
+  return (
+    <div className="px-5 py-2">
+      <h2 className="text-xl font-bold mb-4 flex">Confirm Delete</h2>
+
+      {/* Render account details */}
+      <div className="border w-full h-auto mb-5 p-4 rounded-md shadow-md bg-color-white">
+        <KeyValueDisplay data={selectedUser} />
+      </div>
+
+      <div className="mb-4">
+        <label
+          htmlFor="feedback"
+          className="flex text-sm font-medium text-color-black"
+        >
+          Why are you deleting this account?
+        </label>
+        <textarea
+          id="feedback"
+          rows="4"
+          className="mt-1 block w-full p-2 border rounded-md shadow-md outline-none"
+          placeholder="Provide a reason for deletion (e.g., incorrect data, no longer needed)"
+          value={feedback}
+          onChange={(e) => setFeedback(e.target.value)}
+        ></textarea>
+      </div>
+
+      {/* Buttons */}
+      <div className="flex justify-end">
+        <button
+          onClick={handleDeleteClick}
+          className="bg-color-red text-color-white px-4 py-2 rounded mr-4"
+          disabled={isDeleting}
+        >
+          {isDeleting ? "Deleting..." : "Confirm Delete"}
+        </button>
+        <button
+          onClick={() => navigate("/body/user/:id")}
+          className="bg-color-dark-gray text-color-white px-4 py-2 rounded"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default DeleteUser;
