@@ -10,7 +10,7 @@ const Body = () => {
   return (
     <div className="flex flex-row bg-color-white">
       <Sidebar />
-      <div className="flex flex-col flex-grow">
+      <div className="flex flex-col flex-grow h-screen">
         <Header loginData={user} />
         <div className="flex-grow h-screen w-screen lg:w-full md:w-full  overflow-auto scrollbar  scrollbar-thumb-[#c5cff4] scrollbar-thumb-rounded-full scrollbar-w-1 ">
           <Outlet />
