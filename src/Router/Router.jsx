@@ -1,10 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../Pages/Login/Login";
 import Body from "../Body";
-import Dashborad from "../Pages/Dashborad/Dashborad";
-import UserDashborad from "../Pages/Dashborad/UserDashborad";
-import InstaEnrollDashborad from "../Pages/Dashborad/InstaEnrollDashborad";
-import EpurseDashborad from "../Pages/Dashborad/EpurseDashborad";
 import Profile from "../Components/UserManagement/Profile/Profile";
 import AddProfile from "../Components/UserManagement/Profile/AddProfile";
 import EditProfile from "../Components/UserManagement/Profile/EditProfile";
@@ -52,13 +48,15 @@ import ViewAgent from "../Components/InstaEnroll/Agent/ViewAgent";
 import AuthAgent from "../Components/InstaEnroll/Agent/AuthAgent";
 import DeleteAgent from "../Components/InstaEnroll/Agent/DeleteAgent";
 import Error from "../Components/Error";
-import Category from "../Components/InstaEnroll/Settingss/Category/Category";
-import AddCategory from "../Components/InstaEnroll/Settingss/Category/AddCategory";
 import EditGender from "../Components/InstaEnroll/Settingss/Gender/EditGender";
-import EditCategory from "../Components/InstaEnroll/Settingss/Category/EditCategory";
-import ViewCategory from "../Components/InstaEnroll/Settingss/Category/ViewCategory";
-import AuthCategory from "../Components/InstaEnroll/Settingss/Category/AuthCategory";
-import DeleteCategory from "../Components/InstaEnroll/Settingss/Category/DeleteCategory";
+import {
+  Category,
+  AddCategory,
+  EditCategory,
+  ViewCategory,
+  AuthCategory,
+  DeleteCategory,
+} from "../Components/InstaEnroll/Settingss/Category/index";
 import Gender from "../Components/InstaEnroll/Settingss/Gender/Gender";
 import AddGender from "../Components/InstaEnroll/Settingss/Gender/AddGender";
 import ViewGender from "../Components/InstaEnroll/Settingss/Gender/ViewGender";
@@ -141,12 +139,21 @@ import ViewCommission from "../Components/InstaEnroll/Settingss/Commmission/View
 import DeleteCommission from "../Components/InstaEnroll/Settingss/Commmission/DeleteCommission";
 import ForgotPassword from "../Pages/Login/ForgotPassword";
 import { v4 as uuidv4 } from "uuid";
-import AmlDashboard from "../Pages/Dashborad/AmlDashboard";
 import SanctionListType from "../Components/Aml/Settings/SanctionType";
 import RiskManagement from "../Components/RiskManagement/RiskManagement";
 import DueDeligence from "../Components/RiskManagement/DueDeligence";
 import AddDueDeligence from "../Components/RiskManagement/AddDueDeligence";
 import ProtectedRoute from "./ProtectRoute";
+import { lazy, Suspense } from "react";
+
+// Lazy Load Components for Better Performance
+const Dashborad = lazy(() => import("../Pages/Dashborad/Dashborad"));
+const UserDashborad = lazy(() => import("../Pages/Dashborad/UserDashborad"));
+const InstaEnrollDashborad = lazy(() =>import("../Pages/Dashborad/InstaEnrollDashborad"));
+const EpurseDashborad = lazy(() =>import("../Pages/Dashborad/EpurseDashborad"));
+const AmlDashborad = lazy(() =>import("../Pages/Dashborad/AmlDashboard"));
+
+
 
 
 const appRouter = createBrowserRouter([
@@ -166,24 +173,43 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Dashborad />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Dashborad />
+          </Suspense>
+        ),
       },
       {
         path: "usermanagement",
-        element: <UserDashborad />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <UserDashborad />
+          </Suspense>
+        ),
       },
       {
         path: "instaenroll",
-        element: <InstaEnrollDashborad />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <InstaEnrollDashborad />
+          </Suspense>
+        ),
       },
       {
         path: "epurse",
-        element: <EpurseDashborad />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <EpurseDashborad />
+          </Suspense>
+        ),
       },
       {
-        path:"aml",
-        element:<AmlDashboard/>
-
+        path: "aml",
+        element:(
+          <Suspense fallback={<div>Loading...</div>}>
+            <AmlDashborad />
+          </Suspense>
+        ),
       },
       {
         path: "profile/:id",
@@ -731,21 +757,21 @@ const appRouter = createBrowserRouter([
         element: <ViewLeads />,
       },
       {
-        path:"sanctionlisttype",
-        element:<SanctionListType/>,
+        path: "sanctionlisttype",
+        element: <SanctionListType />,
       },
       {
-        path : "riskassessment",
-        element:<RiskManagement/>,
+        path: "riskassessment",
+        element: <RiskManagement />,
       },
       {
-        path : "dueDeligence",
-        element : <DueDeligence/>
+        path: "dueDeligence",
+        element: <DueDeligence />,
       },
       {
-        path : "addDueDeligence",
-        element : <AddDueDeligence/>
-      }
+        path: "addDueDeligence",
+        element: <AddDueDeligence />,
+      },
     ],
   },
 ]);
