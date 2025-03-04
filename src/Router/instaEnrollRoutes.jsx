@@ -21,6 +21,7 @@ import {Relationship, AddRelationship, EditRelationship, ViewRelationship, AuthR
 import {SourceOfFund, AddSourceOfFund, EditSourceOfFund, ViewSourceOfFund, AuthSourceOfFund, DeleteSourceOfFund} from "../Components/InstaEnroll/Settingss/SourceOfFound/index";
 import {AddressType, AddAddressType, EditAddressType, ViewAddressType, AuthAddressType, DeleteAddressType} from "../Components/InstaEnroll/Settingss/AddressType/index";
 import {Commission,AddCommission,ViewCommission,EditCommission,AuthCommission,DeleteCommission} from "../Components/InstaEnroll/Settingss/Commmission/index";
+import { Customer,ViewCustomer } from "../Components/InstaEnroll/Customer/index";
 
 const InstaEnrollDashborad = lazy(() => import("../Pages/Dashborad/InstaEnrollDashborad"));
 
@@ -492,5 +493,13 @@ export const instaEnrollRoutes = [
   {
     path: "deleteaddresstype/:id",
     element: <DeleteAddressType />,
+  },
+  {
+    path: "customer/:id",
+    element: <Customer />,
+  },
+  {
+    path: "viewcustomer/:id",
+    element: <ViewCustomer />,
   },
 ];

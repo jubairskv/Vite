@@ -37,7 +37,6 @@ const appRouter = createBrowserRouter([
             <Dashborad />
           </Suspense>
         ),
-        children: []
       },
       ...instaEnrollRoutes,
       ...userManagementRoutes,
