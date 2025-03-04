@@ -5,8 +5,15 @@ import ForgotPassword from "../Pages/Login/ForgotPassword";
 import Error from "../Components/Error";
 import { v4 as uuidv4 } from "uuid";
 import ProtectedRoute from "./ProtectRoute";
-import {amlRoutes, userManagementRoutes, instaEnrollRoutes, epurseRoutes, riskAssessmentRoutes} from "./index"
+import { 
+  riskAssessmentRoutes, 
+  epurseRoutes, 
+  instaEnrollRoutes, 
+  userManagementRoutes, 
+  amlRoutes 
+} from "./index";
 import { lazy, Suspense } from "react";
+
 
 // Lazy Load Components for Better Performance
 const Dashborad = lazy(() => import("../Pages/Dashborad/Dashborad"));

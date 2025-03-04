@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 
 const AmlDashborad = lazy(() => import("../Pages/Dashborad/AmlDashboard"));
 
- export const amlRoutes = [
+export const amlRoutes = [
   {
     path: "aml",
     element: (
