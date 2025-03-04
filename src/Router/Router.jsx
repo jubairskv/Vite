@@ -3,15 +3,8 @@ import Login from "../Pages/Login/Login";
 import Body from "../Body";
 import ForgotPassword from "../Pages/Login/ForgotPassword";
 import Error from "../Components/Error";
-import { v4 as uuidv4 } from "uuid";
 import ProtectedRoute from "./ProtectRoute";
-import { 
-  riskAssessmentRoutes, 
-  epurseRoutes, 
-  instaEnrollRoutes, 
-  userManagementRoutes, 
-  amlRoutes 
-} from "./index";
+import { riskAssessmentRoutes, epurseRoutes, instaEnrollRoutes, userManagementRoutes, amlRoutes } from "./index";
 import { lazy, Suspense } from "react";
 
 
@@ -52,6 +45,5 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-console.log(`customertype${uuidv4()}`);
 
 export default appRouter;
