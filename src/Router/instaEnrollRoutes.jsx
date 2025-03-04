@@ -1,7 +1,5 @@
 import { lazy, Suspense } from "react";
 import Settings from "../Components/InstaEnroll/Settingss/Settings";
-import {Profile,AddProfile,ViewProfile,EditProfile,AuthProfile,DeleteProfile} from "../Components/UserManagement/Profile/index";
-import {User,AddUser,ViewUser,EditUser,AuthUser,DeleteUser} from "../Components/UserManagement/User/index";
 import {AccountType,AddAccountType,ViewAccountType,EditAccountType,AuthAccountType,DeleteAccountType} from "../Components/InstaEnroll/Settingss/AccountType/index";
 import {CustomerType,AddCustomerType,ViewCustomerType,EditCustomerType,AuthCustomerType,DeleteCustomerType} from "../Components/InstaEnroll/Settingss/CustomerType/index";
 import {AccountSubType,AddAccountSubType,ViewAccountSubType,EditAccountSubType,AuthAccountSubType,DeleteAccountSubType} from "../Components/InstaEnroll/Settingss/AccountSubType/index";

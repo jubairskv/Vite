@@ -20,10 +20,6 @@ export const epurseRoutes = [
     path: "customer/:id",
     element: <Customer />,
   },
-//   {
-//     path: "addcustomer",
-//     element: <CustomerForm />,
-//   },
   {
     path: "viewcustomer",
     element: <ViewCustomers />,

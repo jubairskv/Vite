@@ -1,8 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Profile, AddProfile, ViewProfile, EditProfile, AuthProfile, DeleteProfile} from "../Components/UserManagement/Profile/index";
-import { User, AddUser, ViewUser, EditUser,AuthUser,
-  DeleteUser,
-} from "../Components/UserManagement/User/index";
+import { User, AddUser, ViewUser, EditUser, AuthUser, DeleteUser} from "../Components/UserManagement/User/index";
 
 const UserDashborad = lazy(() => import("../Pages/Dashborad/UserDashborad"));
 
