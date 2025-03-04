@@ -5,10 +5,7 @@ import ForgotPassword from "../Pages/Login/ForgotPassword";
 import Error from "../Components/Error";
 import { v4 as uuidv4 } from "uuid";
 import ProtectedRoute from "./ProtectRoute";
-import { riskAssessmentRoutes } from "./riskAssessementRoutes";
-import { epurseRoutes } from "./epurseRoutes";
-import {instaEnrollRoutes} from "./instaEnrollRoutes";
-import { userManagementRoutes } from "./userManagementRoutes";
+import { amlRoutes, userManagementRoutes, instaEnrollRoutes, epurseRoutes, riskAssessmentRoutes} from "./index"
 import { lazy, Suspense } from "react";
 
 // Lazy Load Components for Better Performance
@@ -39,6 +36,7 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
       },
+      ...amlRoutes,
       ...instaEnrollRoutes,
       ...userManagementRoutes,
       ...epurseRoutes,
