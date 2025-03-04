@@ -13,19 +13,11 @@ import ViewUser from "../Components/UserManagement/User/ViewUser";
 import AuthUser from "../Components/UserManagement/User/AuthUser";
 import Settings from "../Components/InstaEnroll/Settingss/Settings";
 import {AccountType,AddAccountType,ViewAccountType,EditAccountType,AuthAccountType,DeleteAccountType} from "../Components/InstaEnroll/Settingss/AccountType/index";
-import CustomerType from "../Components/InstaEnroll/Settingss/CustomerType/CustomerType";
-import AddCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/AddCustomerType";
-import EditCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/EditCustomerType";
-import AuthCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/AuthCustomerType";
-import ViewCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/ViewCustomerType";
+import {CustomerType,AddCustomerType,ViewCustomerType,EditCustomerType,AuthCustomerType,DeleteCustomerType} from "../Components/InstaEnroll/Settingss/CustomerType/index";
 import {AccountSubType,AddAccountSubType,ViewAccountSubType,EditAccountSubType,AuthAccountSubType,DeleteAccountSubType} from "../Components/InstaEnroll/Settingss/AccountSubType/index";
-import ProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/ProofOfAddress";
-import AddProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/AddProofOfAddress";
-import EditProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/EditProofOfAddress";
-import ViewProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/ViewProofOfAddress";
-import AuthProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/AuthProofOfAddress";
-import DeleteProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/DeleteProofOfAddress";
+import {ProofOfAddress,AddProofOfAddress,ViewProofOfAddress,EditProofOfAddress,AuthProofOfAddress,DeleteProofOfAddress} from "../Components/InstaEnroll/Settingss/ProofOfAddress/index";
 import {BusinessNature,AddBusinessNature,ViewBusinessNature,EditBusinessNature,AuthBusinessNature,DeleteBusinessNature} from "../Components/InstaEnroll/Settingss/BusinessNature/index";
+//import {Agent,AddAgent,ViewAgent,EditAgent,AuthAgent,DeleteAgent} from "../Components/InstaEnroll/Settingss/BusinessNature/index";
 import Agent from "../Components/InstaEnroll/Agent/Agent";
 import AddAgent from "../Components/InstaEnroll/Agent/AddAgent";
 import EditAgent from "../Components/InstaEnroll/Agent/EditAgent";
@@ -33,37 +25,12 @@ import ViewAgent from "../Components/InstaEnroll/Agent/ViewAgent";
 import AuthAgent from "../Components/InstaEnroll/Agent/AuthAgent";
 import DeleteAgent from "../Components/InstaEnroll/Agent/DeleteAgent";
 import Error from "../Components/Error";
-import EditGender from "../Components/InstaEnroll/Settingss/Gender/EditGender";
-import {
-  Category,
-  AddCategory,
-  EditCategory,
-  ViewCategory,
-  AuthCategory,
-  DeleteCategory,
-} from "../Components/InstaEnroll/Settingss/Category/index";
-import Gender from "../Components/InstaEnroll/Settingss/Gender/Gender";
-import AddGender from "../Components/InstaEnroll/Settingss/Gender/AddGender";
-import ViewGender from "../Components/InstaEnroll/Settingss/Gender/ViewGender";
-import AuthGender from "../Components/InstaEnroll/Settingss/Gender/AuthGender";
-import DeleteGender from "../Components/InstaEnroll/Settingss/Gender/DeleteGender";
-import Disability from "../Components/InstaEnroll/Settingss/Disability/Disability";
-import AddDisability from "../Components/InstaEnroll/Settingss/Disability/AddDisability";
-import AuthDisability from "../Components/InstaEnroll/Settingss/Disability/AuthDisability";
-import ViewDisability from "../Components/InstaEnroll/Settingss/Disability/ViewDisability";
-import AddModeOfOperation from "../Components/InstaEnroll/Settingss/ModeOfOpertion/AddModeOfOperation";
-import ModeOfOperation from "../Components/InstaEnroll/Settingss/ModeOfOpertion/ModeOfOpertion";
-import ViewModeOfOperation from "../Components/InstaEnroll/Settingss/ModeOfOpertion/ViewModeOfOpertion";
-import AuthModeOfOperation from "../Components/InstaEnroll/Settingss/ModeOfOpertion/AuthModeOfOpertion";
-import Occupation from "../Components/InstaEnroll/Settingss/Occupation/Occupation";
-import AddOccupation from "../Components/InstaEnroll/Settingss/Occupation/AddOccupation";
-import EditOccupation from "../Components/InstaEnroll/Settingss/Occupation/EditOccupation";
-import ViewOccupation from "../Components/InstaEnroll/Settingss/Occupation/ViewOccupation";
-import AuthOccupation from "../Components/InstaEnroll/Settingss/Occupation/AuthOccupation";
-import ProofOfIdentity from "../Components/InstaEnroll/Settingss/ProofOfIdentity/ProofOfIdentity";
-import AddProofOfIdentity from "../Components/InstaEnroll/Settingss/ProofOfIdentity/AddProofOfIdentity";
-import ViewproofOfIdentity from "../Components/InstaEnroll/Settingss/ProofOfIdentity/ViewProofOfIdentity";
-import AuthProofOfIdentity from "../Components/InstaEnroll/Settingss/ProofOfIdentity/AuthProofofIdentity";
+import { Category, AddCategory, EditCategory, ViewCategory, AuthCategory, DeleteCategory } from "../Components/InstaEnroll/Settingss/Category/index";
+import {Gender, AddGender, EditGender, ViewGender, AuthGender, DeleteGender} from "../Components/InstaEnroll/Settingss/Gender/index";
+import {Disability, AddDisability, EditDisability, ViewDisability, AuthDisability, DeleteDisability} from "../Components/InstaEnroll/Settingss/Disability/index";
+import {ModeOfOperation, AddModeOfOperation, EditModeOfOperation, ViewModeOfOperation, AuthModeOfOperation, DeleteModeOfOperation} from "../Components/InstaEnroll/Settingss/ModeOfOpertion/index";
+import {Occupation, AddOccupation, EditOccupation, ViewOccupation, AuthOccupation, DeleteOccupation} from "../Components/InstaEnroll/Settingss/Occupation/index";
+import {ProofOfIdentity, AddProofOfIdentity, EditProofOfIdentity, ViewProofOfIdentity, AuthProofOfIdentity, DeleteProofOfIdentity} from "../Components/InstaEnroll/Settingss/ProofOfIdentity/index";
 import PepOption from "../Components/InstaEnroll/Settingss/PepOption/PepOption";
 import AddPepOption from "../Components/InstaEnroll/Settingss/PepOption/AddPepOption";
 import ViewPepOption from "../Components/InstaEnroll/Settingss/PepOption/ViewPepOption";
@@ -84,11 +51,6 @@ import SourcOfFund from "../Components/InstaEnroll/Settingss/SourceOfFound/Sourc
 import AddSourceOfFund from "../Components/InstaEnroll/Settingss/SourceOfFound/AddSourceOfFund";
 import ViewSourceOfFund from "../Components/InstaEnroll/Settingss/SourceOfFound/ViewSourceOfFund";
 import AuthSourceOfFund from "../Components/InstaEnroll/Settingss/SourceOfFound/AuthSourceOfFund";
-import DeleteOccupation from "../Components/InstaEnroll/Settingss/Occupation/DeleteOccupation";
-import EditDisability from "../Components/InstaEnroll/Settingss/Disability/EditDisability";
-import DeleteDisability from "../Components/InstaEnroll/Settingss/Disability/DeleteDisability";
-import EditModeOfOperation from "../Components/InstaEnroll/Settingss/ModeOfOpertion/EditModeOfOperation";
-import DeleteModeOfOperation from "../Components/InstaEnroll/Settingss/ModeOfOpertion/DeleteModeOfOperation";
 import EditProofOfIdentity from "../Components/InstaEnroll/Settingss/ProofOfIdentity/EditProofOfIdentity";
 import DeleteProofOfIdentity from "../Components/InstaEnroll/Settingss/ProofOfIdentity/DeleteProofOfIdentity";
 import EditPepOption from "../Components/InstaEnroll/Settingss/PepOption/EditPepOption";
@@ -107,7 +69,6 @@ import EditAddressType from "../Components/InstaEnroll/Settingss/AddressType/Edi
 import AuthAddressType from "../Components/InstaEnroll/Settingss/AddressType/AuthAddressType";
 import ViewAddressType from "../Components/InstaEnroll/Settingss/AddressType/ViewAddressType";
 import DeleteAddressType from "../Components/InstaEnroll/Settingss/AddressType/DeleteAddressType";
-import DeleteCustomertype from "../Components/InstaEnroll/Settingss/CustomerType/DeleteCustomerType";
 import DeleteUser from "../Components/UserManagement/User/DeleteUser";
 import DeleteProfile from "../Components/UserManagement/Profile/DeleteProfile";
 import Customers from "../Components/Epurse/Customers/Customers";
@@ -116,12 +77,7 @@ import Leads from "../Components/Epurse/Leads/Leads";
 import ViewLeads from "../Components/Epurse/Leads/ViewLeads";
 import Customer from "../Components/InstaEnroll/Customer/Customer";
 import CustomerForm from "../Components/InstaEnroll/Customer/CustomerForm";
-import Commission from "../Components/InstaEnroll/Settingss/Commmission/Commission";
-import AddCommission from "../Components/InstaEnroll/Settingss/Commmission/AddCommission";
-import EditCommission from "../Components/InstaEnroll/Settingss/Commmission/EditCommission";
-import AuthCommission from "../Components/InstaEnroll/Settingss/Commmission/AuthCommission";
-import ViewCommission from "../Components/InstaEnroll/Settingss/Commmission/ViewCommission";
-import DeleteCommission from "../Components/InstaEnroll/Settingss/Commmission/DeleteCommission";
+import {Commission,AddCommission,ViewCommission,EditCommission,AuthCommission,DeleteCommission} from "../Components/InstaEnroll/Settingss/Commmission/index";
 import ForgotPassword from "../Pages/Login/ForgotPassword";
 import { v4 as uuidv4 } from "uuid";
 import SanctionListType from "../Components/Aml/Settings/SanctionType";
@@ -298,7 +254,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "deletecustomertype/:id",
-        element: <DeleteCustomertype />,
+        element: <DeleteCustomerType />,
       },
       {
         path: "accountsubtype/:id",
@@ -483,7 +439,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "viewproofofidentity/:id",
-        element: <ViewproofOfIdentity />,
+        element: <ViewProofOfIdentity />,
       },
       {
         path: "authproofofidentity/:id",
