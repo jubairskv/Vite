@@ -12,35 +12,20 @@ import EditUser from "../Components/UserManagement/User/EditUser";
 import ViewUser from "../Components/UserManagement/User/ViewUser";
 import AuthUser from "../Components/UserManagement/User/AuthUser";
 import Settings from "../Components/InstaEnroll/Settingss/Settings";
-import AccountType from "../Components/InstaEnroll/Settingss/AccountType/AccountType";
-import AddAccountType from "../Components/InstaEnroll/Settingss/AccountType/AddAccountType";
-import ViewModal from "../Components/InstaEnroll/Settingss/AccountType/ViewAccountType";
-import Auth from "../Components/InstaEnroll/Settingss/AccountType/AuthAccountType";
-import Edit from "../Components/InstaEnroll/Settingss/AccountType/EditAccountType";
-import Delete from "../Components/InstaEnroll/Settingss/AccountType/DeleteAccountType";
+import {AccountType,AddAccountType,ViewAccountType,EditAccountType,AuthAccountType,DeleteAccountType} from "../Components/InstaEnroll/Settingss/AccountType/index";
 import CustomerType from "../Components/InstaEnroll/Settingss/CustomerType/CustomerType";
 import AddCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/AddCustomerType";
 import EditCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/EditCustomerType";
 import AuthCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/AuthCustomerType";
 import ViewCustomerType from "../Components/InstaEnroll/Settingss/CustomerType/ViewCustomerType";
-import AccountSubType from "../Components/InstaEnroll/Settingss/AccountSubType/AccountSubType";
-import AddAccountSubType from "../Components/InstaEnroll/Settingss/AccountSubType/AddAccountSubType";
-import ViewAccountSubType from "../Components/InstaEnroll/Settingss/AccountSubType/ViewAccountSub";
-import EditAccountSubType from "../Components/InstaEnroll/Settingss/AccountSubType/EditAccountSubType";
-import AuthAccountSubType from "../Components/InstaEnroll/Settingss/AccountSubType/AuthAccountSubType";
-import DeleteAccountSubType from "../Components/InstaEnroll/Settingss/AccountSubType/DeleteAccountSubType";
+import {AccountSubType,AddAccountSubType,ViewAccountSubType,EditAccountSubType,AuthAccountSubType,DeleteAccountSubType} from "../Components/InstaEnroll/Settingss/AccountSubType/index";
 import ProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/ProofOfAddress";
 import AddProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/AddProofOfAddress";
 import EditProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/EditProofOfAddress";
 import ViewProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/ViewProofOfAddress";
 import AuthProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/AuthProofOfAddress";
 import DeleteProofOfAddress from "../Components/InstaEnroll/Settingss/ProofOfAddress/DeleteProofOfAddress";
-import BusinessNature from "../Components/InstaEnroll/Settingss/BusinessNature/BusinessNature";
-import AddBusinessNature from "../Components/InstaEnroll/Settingss/BusinessNature/AddBusinessNature";
-import EditBusinessNature from "../Components/InstaEnroll/Settingss/BusinessNature/EditBusinessNature";
-import ViewBusinessNature from "../Components/InstaEnroll/Settingss/BusinessNature/ViewBusinesNature";
-import AuthBusinessNature from "../Components/InstaEnroll/Settingss/BusinessNature/AuthBusinessNature";
-import DeleteBusinessNature from "../Components/InstaEnroll/Settingss/BusinessNature/DeleteBusinessNature";
+import {BusinessNature,AddBusinessNature,ViewBusinessNature,EditBusinessNature,AuthBusinessNature,DeleteBusinessNature} from "../Components/InstaEnroll/Settingss/BusinessNature/index";
 import Agent from "../Components/InstaEnroll/Agent/Agent";
 import AddAgent from "../Components/InstaEnroll/Agent/AddAgent";
 import EditAgent from "../Components/InstaEnroll/Agent/EditAgent";
@@ -277,19 +262,19 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "view",
-        element: <ViewModal />,
+        element: <ViewAccountType />,
       },
       {
         path: "edit/:id",
-        element: <Edit />,
+        element: <EditAccountType />,
       },
       {
         path: "auth/:id",
-        element: <Auth />,
+        element: <AuthAccountType />,
       },
       {
         path: "delete/:id",
-        element: <Delete />,
+        element: <DeleteAccountType />,
       },
       {
         path: `customertype/:id`,
